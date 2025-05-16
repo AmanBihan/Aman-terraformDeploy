@@ -78,6 +78,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
   gap: 40px;
   justify-items: center;
+  align-items: stretch;
   padding: 20px;
   flex-grow: 1;
 }
@@ -91,7 +92,6 @@ section {
   text-decoration: none;
   color: white;
   display: block;
-  height: 250px;
 }
 .skill-img {
   background-color: #1f2937;

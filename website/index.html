@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.project-box');
+  let maxHeight = 0;
+  boxes.forEach(box => {
+    box.style.height = 'max-content';
+    if (box.offsetHeight > maxHeight) maxHeight = box.offsetHeight;
+  });
+  boxes.forEach(box => box.style.height = maxHeight + 'px');
+});
+</script>
 <body>
   <canvas class="background-canvas" id="starCanvas"></canvas>
 
