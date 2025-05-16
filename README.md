@@ -1,10 +1,5 @@
-Here’s a complete `README.md` file for your **portfolio-terraform** project. It includes deployment instructions and explanations of the main GCP resources used.
 
----
 
-### 📄 `README.md`
-
-````markdown
 # 🌐 Interactive Portfolio on Google Cloud (via Terraform)
 
 This project deploys a static portfolio website to Google Cloud Storage using Terraform. The site is publicly accessible and hosted securely and reliably by Google Cloud infrastructure.
