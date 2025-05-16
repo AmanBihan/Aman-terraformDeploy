@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas class="background-canvas" id="starCanvas"></canvas>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <div class="about-container">
+      <img src="images/profile.jpg" alt="Profile" class="profile-pic" />
+      <div class="about-text">
+        <h1>Hello, I'm Fazal Ur Rehaman</h1>
+        <p>
+          Senior Software Engineer specializing in full-stack development and AWS cloud solutions. I bring deep experience across all stages of the development lifecycle and a strong foundation in customer-centric problem solving. I build scalable, intuitive, and high-performance applications that drive business value and enhance user experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="projects">
+      <a href="https://github.com/Fazal-Rehaman07/PDF_Converter_Lambda.git" class="project-box" target="_blank">
+        <h3>PDF Tool on AWS</h3>
+        <p>A web-based file processing service enabling users to upload files via a user-friendly frontend interface. Integrated AWS Lambda to perform automatic file conversion to PDF or compression upon upload. Utilized Amazon S3 for secure file storage and delivery, allowing users to download processed PDF files seamlessly.</p>
+      </a>
+      <a href="https://github.com/Fazal-Rehaman07/Deploy_GoApp_to_AWS.git" class="project-box" target="_blank">
+        <h3>Portfolio WebApp Deployment with AWS SAM</h3>
+        <p>Built and deployed a serverless portfolio web application using AWS SAM and CloudFormation. Integrated S3 for static hosting, API Gateway and Lambda for backend processing, and DynamoDB for storing visitor logs.</p>
+      </a>
+      <a href="https://github.com/Fazal-Rehaman07/Docker_MultiContainer.git" class="project-box" target="_blank">
+        <h3>Order Management System with Docker Multi-Container Deployment</h3>
+        <p>Designed and deployed a full-stack Order Management System using Node.js, Express, and MongoDB, containerized with Docker. Implemented a multi-container architecture using Docker Compose to manage backend services and a responsive frontend, enabling seamless order submission and retrieval through a web interface.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-img"><img src="images/aws-cp.png" alt="AWS Cloud Practitioner" /></div>
+      <div class="skill-img"><img src="images/aws-dev.png" alt="AWS Developer" /></div>
+      <div class="skill-img"><img src="images/azure-fundamentals.png" alt="Azure Fundamentals" /></div>
+      <div class="skill-img"><img src="images/fullstack-java.png" alt="Full-stack Java" /></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <div>
+      <a href="https://github.com/Fazal-Rehaman07" target="_blank">
+        <img src="images/github-logo.png" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/fazal-rehaman-07" target="_blank">
+        <img src="images/linkedin-logo.png" alt="LinkedIn" />
+      </a>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
