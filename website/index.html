@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <script>
-window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', () => {
   const boxes = document.querySelectorAll('.project-box');
   let maxHeight = 0;
   boxes.forEach(box => {
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (box.offsetHeight > maxHeight) maxHeight = box.offsetHeight;
   });
   boxes.forEach(box => box.style.height = maxHeight + 'px');
-});
+  });
 </script>
 <body>
   <canvas class="background-canvas" id="starCanvas"></canvas>
