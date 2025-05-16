@@ -90,7 +90,7 @@ terraform destroy
 ---
 
 
-### CI/CD with Google Cloud Build**
+### CI/CD with Google Cloud Build
 
 You can automate deployments to your portfolio bucket whenever changes are pushed to your repository.
 
