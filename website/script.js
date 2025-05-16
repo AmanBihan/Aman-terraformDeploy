@@ -36,3 +36,14 @@ function drawStars() {
   requestAnimationFrame(drawStars);
 }
 drawStars();
+
+let lastScrollY = window.scrollY;
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        navbar.classList.add('hide');
+    } else {
+        navbar.classList.remove('hide');
+    }
+    lastScrollY = window.scrollY;
+    });

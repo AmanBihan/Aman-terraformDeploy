@@ -83,26 +83,94 @@ portfolio-terraform/
 
 ---
 
-## 📌 Customization Ideas
-
-* Add a custom domain (via Cloud DNS + CNAME)
-* Enable HTTPS via Cloud CDN
-* Add CI/CD using GitHub Actions or Cloud Build
-
----
-
-## 🔐 Note on Security
-
-Your website is public to the internet. Do **not** use this for sensitive/private content unless you configure secure access rules.
-
----
-
-## 🧹 Cleanup
-
-To delete all resources created:
-
 ```bash
 terraform destroy
 ```
 
 ---
+
+
+### CI/CD with Google Cloud Build**
+
+You can automate deployments to your portfolio bucket whenever changes are pushed to your repository.
+
+---
+
+## ⚙️ Steps to Set Up Cloud Build CI/CD
+
+### 1. Enable APIs
+
+Make sure these are enabled for your project:
+
+```bash
+gcloud services enable cloudbuild.googleapis.com
+gcloud services enable storage.googleapis.com
+```
+
+---
+
+### 2. Create a Cloud Build Service Account IAM Binding
+
+Grant the Cloud Build service account permission to manage storage objects:
+
+```bash
+PROJECT_ID=terraform-projectfzl
+CLOUD_BUILD_SA="service-${PROJECT_NUMBER}@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:$CLOUD_BUILD_SA" \
+  --role="roles/storage.admin"
+```
+
+> You can find your `PROJECT_NUMBER` by running:
+>
+> ```bash
+> gcloud projects describe terraform-projectfzl --format="value(projectNumber)"
+> ```
+
+---
+
+### 3. Add a `cloudbuild.yaml` to Project Root
+
+Create a file named `cloudbuild.yaml`:
+
+```yaml
+steps:
+  - name: 'hashicorp/terraform:light'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+        terraform init
+        terraform apply -auto-approve
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
+
+---
+
+### 4. Push to GitHub (or other repo) & Connect to Cloud Build
+
+1. Go to **Cloud Console → Cloud Build → Triggers**
+2. Click **Create Trigger**
+3. Choose:
+
+   * Your source repo (GitHub/GitLab/Cloud Source)
+   * Event: Push to `main` branch
+   * Directory: `/` (or path to your Terraform setup)
+   * Cloud Build config file: `cloudbuild.yaml`
+4. Click **Create**
+
+---
+
+### ✅ Done!
+
+Now whenever you push changes to your repo’s `main` branch, Cloud Build will:
+
+* Automatically run Terraform to apply any changes.
+* Update your Google Cloud Storage bucket and redeploy the site.
+
+---
+
+
