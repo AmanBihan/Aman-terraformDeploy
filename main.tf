@@ -5,7 +5,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "portfolio" {
-  name          = "fazalrehaman07-portfolio"
+  name          = "amanportfolio1"
   location      = var.region
   force_destroy = true
 

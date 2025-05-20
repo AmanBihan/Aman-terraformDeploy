@@ -3,89 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fazal Rehaman</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Aman Kumar | DevOps Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .profile {
+      text-align: center;
+    }
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .profile h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+    .profile p {
+      color: #7f8c8d;
+      margin: 10px 0;
+    }
+    .links a {
+      margin: 10px;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+    .section {
+      margin-top: 50px;
+    }
+    .section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #34495e;
+    }
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .section li {
+      margin-bottom: 15px;
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+  </style>
 </head>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-  const boxes = document.querySelectorAll('.project-box');
-  let maxHeight = 0;
-  boxes.forEach(box => {
-    box.style.height = 'max-content';
-    if (box.offsetHeight > maxHeight) maxHeight = box.offsetHeight;
-  });
-  boxes.forEach(box => box.style.height = maxHeight + 'px');
-  });
-
-</script>
 <body>
-  <canvas class="background-canvas" id="starCanvas"></canvas>
-
-  <nav id="navbar">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" data-aos="fade-up">
-    <div class="about-container">
-      <img src="images/profile.jpg" alt="Profile" class="profile-pic" />
-      <div class="about-text">
-        <h1>Hello, I'm Fazal Ur Rehaman</h1>
-        <p>
-          Senior Software Engineer specializing in full-stack development and AWS cloud solutions. I bring deep experience across all stages of the development lifecycle and a strong foundation in customer-centric problem solving. I build scalable, intuitive, and high-performance applications that drive business value and enhance user experience.
-        </p>
+  <div class="container">
+    <div class="profile">
+      <img src="images/profile.jpg" alt="Profile Picture">
+      <h1>Aman Kumar</h1>
+      <p>DevOps Engineer | Cloud Enthusiast | Infrastructure as Code Advocate</p>
+      <div class="links">
+        <a href="https://github.com/AmanBihan/CLO2003_week3..git" target="_blank">GitHub</a>
+        <a href="www.linkedin.com/in/aman-kumar-383634311" target="_blank">LinkedIn</a> 
       </div>
     </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="projects">
-      <a href="https://github.com/Fazal-Rehaman07/PDF_Converter_Lambda.git" class="project-box" target="_blank">
-        <h3>PDF Tool on AWS</h3>
-        <p>A web-based file processing service enabling users to upload files via a user-friendly frontend interface. Integrated AWS Lambda to perform automatic file conversion to PDF or compression upon upload. Utilized Amazon S3 for secure file storage and delivery, allowing users to download processed PDF files seamlessly.</p>
-      </a>
-      <a href="https://github.com/Fazal-Rehaman07/Deploy_GoApp_to_AWS.git" class="project-box" target="_blank">
-        <h3>Portfolio WebApp Deployment with AWS SAM</h3>
-        <p>Built and deployed a serverless portfolio web application using AWS SAM and CloudFormation. Integrated S3 for static hosting, API Gateway and Lambda for backend processing, and DynamoDB for storing visitor logs.</p>
-      </a>
-      <a href="https://github.com/Fazal-Rehaman07/Docker_MultiContainer.git" class="project-box" target="_blank">
-        <h3>Order Management System with Docker Multi-Container Deployment</h3>
-        <p>Designed and deployed a full-stack Order Management System using Node.js, Express, and MongoDB, containerized with Docker. Implemented a multi-container architecture using Docker Compose to manage backend services and a responsive frontend, enabling seamless order submission and retrieval through a web interface.</p>
-      </a>
+    <div class="section">
+      <h2>About Me</h2>
+      <p>I’m a passionate DevOps engineer with experience in automating infrastructure using Terraform, managing cloud environments (Azure & AWS), and deploying applications with CI/CD pipelines. I love solving problems and optimizing systems to be secure, scalable, and reliable.</p>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill-img"><img src="images/aws-cp.png" alt="AWS Cloud Practitioner" /></div>
-      <div class="skill-img"><img src="images/aws-dev.png" alt="AWS Developer" /></div>
-      <div class="skill-img"><img src="images/azure-fundamentals.png" alt="Azure Fundamentals" /></div>
-      <div class="skill-img"><img src="images/fullstack-java.png" alt="Full-stack Java" /></div>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Cloud Platforms: Azure, AWS</li>
+        <li>IaC: Terraform, ARM Templates</li>
+        <li>CI/CD: GitHub Actions, Azure DevOps</li>
+        <li>Containers: Docker, Kubernetes</li>
+        <li>Monitoring: Azure Monitor, Log Analytics</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <div>
-      <a href="https://github.com/Fazal-Rehaman07" target="_blank">
-        <img src="images/github-logo.png" alt="GitHub" />
-      </a>
-      <a href="https://www.linkedin.com/in/fazal-rehaman-07" target="_blank">
-        <img src="images/linkedin-logo.png" alt="LinkedIn" />
-      </a>
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Kubernetes Deployment:</strong> Deployed a web app using Minikube and exposed it via NodePort on AWS EC2.</li>
+        <li><strong>Terraform Automation:</strong> Provisioned full Azure infrastructure using modular Terraform scripts.</li>
+        <li><strong>Serverless Integration:</strong> Created AWS Lambda function triggered by S3 upload to automate email notifications.</li>
+      </ul>
     </div>
-  </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="script.js"></script>
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email: amanbihan4@gmail.com<br>
+      Phone: +1-437-998-7993</p>
+    </div>
+  </div>
 </body>
 </html>

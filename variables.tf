@@ -1,7 +1,7 @@
 
 variable "project_id" {
   type        = string
-  default     = "terraform-projectfzl"
+  default     = "favorable-valor-460414-m4"
   description = "Your GCP project ID"
 }
 
